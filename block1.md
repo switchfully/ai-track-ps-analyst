@@ -4,13 +4,55 @@ This morning is all about the basics. How do you give AI the right context, how 
 
 One thing we want you to do after every single prompt: check two or three things by hand against the brief. Each prompt below tells you what to look at. We kept the brief short on purpose, so this takes you a couple of minutes, not an hour. If you skip it, you're not really testing the AI anymore, you're just trusting it.
 
-* Create one shared place for your team's work (a Word document, a OneNote page, a Teams chat, whatever works for you) with four sections: backlog, glossary, decisions and open questions. We'll move all of this into files in Block 2.
+**What this block is for.** You learn to give an AI the source, the task, the format and the rules it needs, and to check what comes back. By the end of the block your team has a first backlog, a glossary, business rules, a domain model and a short instructions file. Everything you make goes into one shared place, and in Block 2 we move it into files.
+
+**Set up your team's shared place (5 minutes, both pairs together).**
+
+* **Read:** nothing yet
+* **Create:** one shared place for your team's work: a Word document, a OneNote page, a Teams chat, whatever works for you. Give it four sections: **Backlog**, **Glossary**, **Decisions** and **Open questions**
+* **Done when:** all four of you can open it and type in it
+
+You add three more sections during the morning when you need them: **Business rules**, **Diagrams** and **Instructions**. This is also where `prompt-log` lives from Block 2 on.
+
+**How to read an exercise.** Every prompt below starts with the same three lines, so you always know where you stand:
+
+* **Read:** what the prompt works with. This exists already, you don't make it.
+* **Create:** what you make or change, and in which section of your shared place. If it says *nothing*, no section changes in this step.
+* **Done when:** what has to be true before you go to the next prompt.
+
+Not sure what to do now? Look at these three lines first. Still not sure after that? Ask your coach. It means the exercise isn't clear enough, not that you're doing it wrong.
+
+**Where things live.** The course files (`meridian-brief.md` and the cheat sheets) are shared by your coach. Everything you create today goes in your team's shared place. You rotate partners every block, and Block 2 builds on what you made in Block 1, so everybody in the team has to be able to find it. Your sections:
+
+| Section | Made by | In | What it is for |
+|---|---|---|---|
+| Open questions | Pair AB | Prompt 1 | Everything the client has to answer, not you |
+| Decisions | Pair AB | Prompt 1 | Everything your team decides itself, and why |
+| Backlog | Pair AB | Prompts 2 to 4 | User stories with source quotes and acceptance criteria |
+| Glossary | Pair CD | Prompts 1 and 2 | One definition per term |
+| Business rules | Pair CD | Prompt 3 | Every rule the system must enforce, with its source and conflicts |
+| Diagrams | Pair CD | Prompt 4 | The domain model in Mermaid |
+| Instructions | Your whole team | The last 15 minutes | Your house rules for the AI |
+
+**Your block at a glance.** This is a rough guide, not a rule. The block is 90 minutes: about 5 for the shared place, about 65 for your prompts, 15 for the instructions file and a few minutes of room.
+
+| Part | Pair AB | Pair CD |
+|---|---|---|
+| Prompt 1 | 15 min | 15 min |
+| Prompt 2 | 20 min | 15 min |
+| Prompt 3 | 20 min | 20 min |
+| Prompt 4 | 10 min | 15 min |
+| Left over | Prepare questions for the client | A few minutes to share with pair AB |
 
 ---
 
 ## Pair AB: understanding the brief and writing user stories
 
 ### Prompt 1: understand before you build
+
+* **Read:** `meridian-brief.md`
+* **Create:** your contradictions and gaps, sorted into the **Decisions** and **Open questions** sections of your shared place
+* **Done when:** you checked two quotes against the brief, and you and your partner decided for every contradiction whether it is *ours to decide* (Decisions) or *the client's to answer* (Open questions)
 
 * Paste the full Meridian brief into your chat (or attach the file) and send the following prompt:
 
@@ -34,6 +76,10 @@ explicitly as an inference.
 
 ### Prompt 2: the user story backlog
 
+* **Read:** `meridian-brief.md` and your contradictions from Prompt 1
+* **Create:** the stories in the **Backlog** section, grouped by epic. Gaps go in **Open questions**, not in the backlog
+* **Done when:** every story has a source quote, and you checked at least three of them in the brief. A story whose quote you can't find is removed or flagged
+
 ```
 Based on this source material, propose a user story backlog for the Complaint Management
 System, organised into epics. Use the format:
@@ -52,6 +98,10 @@ something is missing, list it separately as a gap, not as a story.
 * Is there a story for regulatory complaints (Marc and Priya both talk about it)? And is there a story that closes complaints automatically? If so, who decided it should be in there, you or the AI?
 
 ### Prompt 3: acceptance criteria for the core flow
+
+* **Read:** your stories for submission, acknowledgement and resolution
+* **Create:** acceptance criteria under those three stories in the **Backlog** section
+* **Done when:** each of the three stories has Given/When/Then criteria with the right timeframes, and you can explain to your partner how a tester verifies two of them
 
 Don't try to do the whole backlog here, there's no time for that. Pick the stories for submission, acknowledgement and resolution.
 
@@ -72,6 +122,10 @@ Rules:
 
 ### Prompt 4: interrogate the output
 
+* **Read:** your **Backlog** section, with the acceptance criteria
+* **Create:** fixes in the **Backlog** section, and a line in **Decisions** for everything you changed
+* **Done when:** for each of the five facts below, you opened the story the AI points to and saw that the fact is really in it. A fact that isn't, you add or you flag as a gap
+
 This is the most important prompt of the block, so please don't skip it.
 
 ```
@@ -90,6 +144,10 @@ and what a development team would build wrong if it were missing.
 
 ### Got some time left? Prepare questions for the client
 
+* **Read:** your **Open questions** section
+* **Create:** the questions for each stakeholder, under the matching entry in **Open questions**
+* **Done when:** every open question has a stakeholder and neutral questions, and none of them is a leading question
+
 ```
 Here is our open-questions list: [paste it]
 
@@ -105,6 +163,10 @@ to ask them. Do not suggest what the answer probably is.
 ## Pair CD: terminology, glossary and business rules
 
 ### Prompt 1: audit the terminology
+
+* **Read:** `meridian-brief.md`
+* **Create:** the audit as rough notes at the top of the **Glossary** section
+* **Done when:** you have the three lists (different words for the same thing, the same word with different meanings, undefined terms), each with the exact quote and who said it
 
 ```
 Here is the source material for a Complaint Management System:
@@ -123,6 +185,10 @@ Quote the exact words and who used them. Use only what is in the documents.
 
 ### Prompt 2: build the glossary
 
+* **Read:** your terminology audit
+* **Create:** the glossary in the **Glossary** section
+* **Done when:** all ten terms from the prompt are defined, you checked three definitions against the brief, and pair AB has a copy
+
 ```
 Based on the terminology audit, write a glossary. For each term: one precise definition,
 the document(s) it comes from, and any conflicting usage you resolved and how.
@@ -135,6 +201,10 @@ acknowledgement, resolution, escalation, extension, regulatory complaint, busine
 * Share the glossary with pair AB as soon as it's more or less stable. Their stories should use the same words as your glossary.
 
 ### Prompt 3: extract the business rules
+
+* **Read:** `meridian-brief.md` and your glossary
+* **Create:** a new section **Business rules** in your shared place
+* **Done when:** every rule has a source and a speaker, conflicts are flagged and not resolved, and the timeframes in your list match the ones you counted in the brief
 
 ```
 Extract every business rule from the source material. A business rule is something the
@@ -155,6 +225,10 @@ Hang on to this list, we'll need it again in Block 2.
 
 ### Prompt 4: a domain model diagram
 
+* **Read:** your glossary and `meridian-brief.md`
+* **Create:** a new section **Diagrams** in your shared place, with the Mermaid code of the domain model
+* **Done when:** the diagram renders in mermaid.live, and you know whether a regulatory complaint is its own thing in the model or just a value in a list
+
 ```
 Based on the source material and our glossary, propose a domain model as a Mermaid class
 diagram. Include the main entities (complaint, category, handler, team leader, customer,
@@ -171,7 +245,11 @@ cardinality.
 
 By now you've probably typed "use only the source", "quote it" and "label inferences" about five times. That's annoying, and it's easy to forget one of them. So let's write them down once.
 
-* Together with the other pair, write a short instructions file for this engagement (10 to 20 lines). Use the lines from your prompts that made the biggest difference. You can let the AI draft it, but do edit it yourselves afterwards:
+* **Read:** your two or three best prompts of this morning
+* **Create:** a new section **Instructions** in your shared place (10 to 20 lines)
+* **Done when:** you ran one of your earlier prompts again in a new chat without the extra rules, and the answer still follows them
+
+Together with the other pair, write a short instructions file for this engagement (10 to 20 lines). Use the lines from your prompts that made the biggest difference. You can let the AI draft it, but do edit it yourselves afterwards:
 
 ```
 Based on the prompts we used this morning [paste 2 or 3 of your best prompts], write a short
@@ -180,7 +258,7 @@ Cover: our role, the output formats we use, how to handle the source material, h
 handle contradictions, and our glossary terms. Keep it under 20 lines.
 ```
 
-* Save it in your team's shared document under a new section called instructions.
+* Save it in your team's shared document under the new section **Instructions**.
 * Try it out. In M365 Copilot, paste it into Settings → Personalization → Custom instructions (or in the instructions of a Copilot Notebook). In Claude.ai, create a Project and paste it into the project instructions. Using GitHub Copilot? Hold on to it, that one comes in Block 2.
 * Start a new chat and run one of your earlier prompts again, but this time without all the extra rules. Does the answer still follow them?
 

@@ -12,8 +12,6 @@ Click a block to open it in your browser. You can read it right here, and copy t
 * [Block 2: Working with an agent](block2.md)
 * [Block 3: Grounding and skills](block3.md)
 
-Block 4 comes later today. Your coach hands it out.
-
 > Stuck on a prompt? After you've tried it twice yourself, take a look at the examples for [Block 2](block2-prompt-examples.md) or [Block 3](block3-prompt-examples.md). Write down what the example does that yours didn't.
 
 ---
@@ -42,13 +40,13 @@ You don't need anything but your AI tool and a place for your team's notes. Open
 
 ## Block 2: open the workspace
 
-For Block 2 you need an agent that works on real files, so you'll use a GitHub Codespace. That's VS Code in your browser, and it comes with all the files from this repo.
+For Block 2 you need an agent that works on real files, so you'll use a GitHub Codespace. That's VS Code in your browser. The workspace has its own repo: <https://github.com/switchfully/ai-track-ps-analyst-meridian-starter>
 
-1. On the main page of this repo, click the green **Code** button.
+1. Open the workspace repo and click the green **Code** button.
 2. Go to the **Codespaces** tab and click **Create codespace on main**. Sign in to GitHub if it asks.
 3. Wait a minute or two while it builds.
-4. You're now in VS Code. The files of this repo are in the list on the left.
-5. Open `block2.md` in the Codespace and click the preview icon in the top right. Now you can read the block next to your chat.
+4. You're now in VS Code. The files of the workspace (`backlog.md`, `glossary.md`, `meridian-brief.md` and the rest) are in the list on the left.
+5. Keep [Block 2](block2.md) open in another browser tab, so you can read the block next to your Codespace.
 
 > This Codespace is your pair's own scratch space. Please don't push anything back. At the end of the block you copy your results back into your team's shared document.
 

@@ -14,9 +14,40 @@ One more thing before you start: if you worked in another tool this morning (M36
 
 > **Watch your tokens.** Agents read your files again on every step, and a long chat gets read again with every message. So name the files in your prompt, and start a **new chat** for each step (keep the plan in your shared document, not in the chat). Your tool says you're out of tokens? Don't wait for it to reset: work on your partner's machine or switch tools, and tell your coach.
 
+**Where things live.** Your work from Blocks 1 and 2 travels with you in the **context pack**. Everything new you make in this block gets one of the names below. Working in the Codespace? Make them files. Working in Claude.ai? Make them sections in your team's shared document, with the same names.
+
+| Name | Made by | In | What it is for |
+|---|---|---|---|
+| `audit-findings.md` | Pair AD | Step 2 | Every place where your backlog breaks or misses the regulation, with the fixes added in step 3 |
+| `review-notes.md` | Pair BC | Step 2 | The traceability and regulation checks |
+| `pre-mortem.md` | Pair BC | Step 3 | The six reasons the project failed |
+| `steering-committee-review.md` | Pair BC | Step 4 | The review document with a readiness status |
+| the skill folder, with `SKILL.md` | Both pairs | The last 25 minutes | The skill you build and swap |
+| `prompt-log` | Both pairs | All block | Your prompts, with a one-line verdict each (in the shared document, as before) |
+
+The regulatory standards are a course file too: `meridian-regulatory-standards.md`. You read it through the server, and you use the file to check what the AI quoted.
+
+**How to read this block.** Every step starts with a **Read:** line (what it works with, these exist already) and a **Create:** line (what you make, and where it lives). "The result is good when" is your *done when*. Not sure what to do now? Look at those lines first, then ask your coach.
+
+**Your block at a glance.** This is a rough guide, not a rule. The skill in the last 25 minutes is the part to protect: cut the swap if you must, not the drafting.
+
+| Part | Pair AD | Pair BC |
+|---|---|---|
+| Setting up | 10 min | 10 min |
+| Step 1: feel the difference | 10 min | 10 min |
+| Hand over your work | 10 min | 10 min |
+| Step 2 | 20 min (the audit) | 15 min (review) |
+| Step 3 | 15 min (fix the Critical findings) | 10 min (pre-mortem) |
+| Step 4 | none | 10 min (review document) |
+| The last 25 minutes | skill | skill |
+
 ---
 
 ### Setting up (both pairs, about 10 minutes)
+
+* **Read:** nothing yet, the standards come in step 1
+* **Create:** the connector in Claude.ai (Option 1), or `.vscode/mcp.json` in your Codespace (Option 2)
+* **Done when:** your tool can use `ai-track-standards` (in Copilot, the tools list shows `list_documents` and `read_document`)
 
 Pick one of the two options below. Both work for everything we do in this block.
 
@@ -51,6 +82,10 @@ Option 2, GitHub Copilot in your Codespace from Block 2:
 
 ### Both pairs, step 1: feel the difference
 
+* **Read:** `meridian-regulatory-standards.md`, to check what the AI quotes
+* **Create:** nothing. Note what you saw in your prompt log
+* **Done when:** you can say what is different between the answer without and the answer with the connector
+
 You're going to ask the same question twice: first in a chat without the connector, then in one with the connector. For this one, we give you the question, so both runs are comparable:
 
 ```
@@ -66,6 +101,10 @@ For the second run, you write the extra sentence that makes the AI use the serve
 ---
 
 ### Both pairs: hand over your work
+
+* **Read:** your context pack from the end of Block 2
+* **Create:** a new chat that has your context pack in it, and the connector on if you're in Claude.ai
+* **Done when:** the AI listed every part it received, the number of stories matches your own count, and nothing is cut off
 
 Open a **new** chat (with the connector on, if you're in Claude.ai) and attach or paste your context pack. Before you ask it to do anything with it, check what actually arrived. You write that prompt yourself.
 
@@ -86,6 +125,9 @@ Use this same chat for your audit or review, so you don't have to hand over your
 
 ### Step 2: the audit
 
+* **Read:** your backlog from the context pack, and the regulatory standards through the MCP server
+* **Create:** `audit-findings.md` (new). Don't change any story yet
+
 **Your mandate:** find out where your requirements backlog violates the regulatory standards, or misses something the standards require.
 
 The result is good when:
@@ -101,9 +143,12 @@ Then check it:
 
 ### Step 3: fix the critical findings
 
+* **Read:** `audit-findings.md`
+* **Create:** the rewritten stories and criteria in your backlog, and a "Fixes" section in `audit-findings.md` with what was wrong and which clause it's based on
+
 **Your mandate:** rewrite every story and acceptance criterion that has a Critical finding.
 
-The result is good when every change comes with a note on what was wrong and which clause it's based on.
+The result is good when every Critical finding has a rewritten story or criterion, and every change comes with a note on what was wrong and which clause it's based on.
 
 * Paste the fixes into your team's shared document.
 
@@ -114,6 +159,9 @@ The result is good when every change comes with a note on what was wrong and whi
 You're the senior analyst who reviews the package before the client gets to see it. The AI will find real issues, but it will also invent a few that aren't there. It's up to you to tell them apart.
 
 ### Step 2: traceability and regulation in one review
+
+* **Read:** your backlog, acceptance criteria and open questions from the context pack, `meridian-brief.md` and the regulatory standards through the MCP server
+* **Create:** `review-notes.md` (new), with a section "Traceability" and a section "Regulation"
 
 **Your mandate:** review the requirements package (backlog, acceptance criteria and open questions) before it goes to the client. You need two checks, using `meridian-brief.md` and the regulatory document.
 
@@ -127,6 +175,9 @@ Then check it:
 
 ### Step 3: the pre-mortem
 
+* **Read:** your backlog, `review-notes.md` and the regulatory standards
+* **Create:** `pre-mortem.md` (new), with six reasons
+
 **Your mandate:** make the AI play a red team. It's one year from now, the system was built exactly from this package, and the project failed. Why?
 
 The result is good when:
@@ -138,6 +189,9 @@ Then check it:
 * Sort the 6 reasons into three piles: real (there's a source behind it), speculative and invented. Chances are you'll have something in every pile.
 
 ### Step 4: the review document
+
+* **Read:** `review-notes.md` and `pre-mortem.md`
+* **Create:** `steering-committee-review.md` (new)
 
 **Your mandate:** combine the review and the pre-mortem into one document for the steering committee.
 
@@ -164,6 +218,10 @@ Pair AD builds `regulatory-check`, a skill that checks any requirement against M
 
 ### Step 5: draft the skill
 
+* **Read:** your prompt log and the prompts that worked best in this block
+* **Create:** a folder with the name of your skill, and in it `SKILL.md` (new). In Copilot: `.github/skills/<skill-name>/SKILL.md`. In Claude.ai: a folder you zip and upload
+* **Done when:** the skill exists, it is under 40 lines, and its description says when to use it
+
 A `SKILL.md` file always looks like this. That's the format, the AI doesn't know it by heart:
 
 ```
@@ -186,6 +244,10 @@ Then read what it wrote and edit it yourselves. Spend most of your time on the d
 
 ### Install it and swap
 
+* **Read:** the skill of the other pair in your group
+* **Create:** one piece of feedback for the other pair, in your prompt log
+* **Done when:** you ran their skill in a new chat on one of your own stories, without explaining what it does, and gave them your feedback
+
 * Using Claude.ai? Put `SKILL.md` in a folder with the same name as the skill, zip that folder and upload it under **Customize** → **Skills** (the **+** button). Don't forget to switch it on.
 * Using GitHub Copilot? Ask the agent to save it as `.github/skills/<skill-name>/SKILL.md`. Copilot picks it up by itself, and you can also start it with `/<skill-name>` in the chat.
 * Now swap with the other pair in your group. Try their skill on one of your stories, in a new chat, without explaining what it does. Did the AI pick it up on its own? Did it do what the other pair had in mind? Give them one piece of feedback.
@@ -193,6 +255,10 @@ Then read what it wrote and edit it yourselves. Spend most of your time on the d
 ---
 
 ### Finished early? Wireframe the customer view
+
+* **Read:** your backlog
+* **Create:** `status-page.html` (new)
+* **Done when:** it opens in your browser, and under the wireframe is a list of everything on the page that your stories don't cover
 
 **Your mandate:** Sarah wants customers to see where their complaint is. Make a low-fidelity wireframe of the customer's complaint status page, based on your stories.
 

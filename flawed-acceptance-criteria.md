@@ -1,9 +1,9 @@
-# Flawed Acceptance Criteria: Block 2, Pair AC, Prompt 1
+# Flawed Acceptance Criteria: Block 2, Pair AC, Step 1
 
 These three acceptance criteria were drafted in a previous session on the Meridian
 engagement. Each one has a factual error: it does not match what the stakeholders actually
 said in the source material. Your job is to find the errors, with AI, by checking every
-criterion against the source material. Follow Prompt 1 in `block2-prompt-ladders.md`.
+criterion against the source material. Follow step 1 in `block2-own-prompts.md`.
 
 ---
 
